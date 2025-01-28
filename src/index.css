@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-gold-100: #f7e9c3;
+    --color-gold-400: #d4af37;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font: font-sans antialiased;
+  }
+}
+
+@layer components {
+  .text-gold-100 {
+    color: var(--color-gold-100);
+  }
+
+  .text-gold-400 {
+    color: var(--color-gold-400);
+  }
+}
+
+@layer utilities {
+  .bg-gold-400 {
+    background-color: var(--color-gold-400);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1.5s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 1.5s ease-out forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
